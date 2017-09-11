@@ -4,9 +4,7 @@
 [![Test Coverage](https://codeclimate.com/github/dwilkie/***REMOVED***-***REMOVED***/badges/coverage.svg)](https://codeclimate.com/github/dwilkie/***REMOVED***-***REMOVED***/coverage)
 [![Code Climate](https://codeclimate.com/github/dwilkie/***REMOVED***-***REMOVED***/badges/gpa.svg)](https://codeclimate.com/github/dwilkie/***REMOVED***-***REMOVED***)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/***REMOVED***/***REMOVED***`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+***REMOVED***::***REMOVED*** is a ruby client for the [***REMOVED***](https://***REMOVED***.com.kh) CBS Conductor API.
 
 ## Installation
 
@@ -36,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/***REMOVED***-***REMOVED***.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dwilkie/***REMOVED***-***REMOVED***.
 
 ## License
 
