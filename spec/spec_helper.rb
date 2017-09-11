@@ -3,8 +3,11 @@ if ENV["START_SIMPLECOV"].to_i == 1
   SimpleCov.start
 end
 
+require_relative "support/dotenv"
 require "bundler/setup"
 require "***REMOVED***/***REMOVED***"
+
+Dir[File.expand_path("../support/**/*.rb", __FILE__)].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

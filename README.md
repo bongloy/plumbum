@@ -24,7 +24,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Setup your Environment Variables
+
+***REMOVED***::***REMOVED*** can be configured using environment variables. For convenience dotenv is included as a development dependency so you can setup your environment in `.env`.
+
+First copy `.env.example` to `.env`
+
+```
+$ cp .env.example .env
+```
+
+Then open up `.env` and replace the dummy values with your actual values.
+
+### Examples
+
+See the [examples directory](https://github.com/dwilkie/***REMOVED***-***REMOVED***/tree/master/examples)
 
 ## Development
 

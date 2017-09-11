@@ -11,4 +11,7 @@
 # rspec failure tracking
 .rspec_status
 
+# Local gems
 /vendor/ruby/
+
+.env
