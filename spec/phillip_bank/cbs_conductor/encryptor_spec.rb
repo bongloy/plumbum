@@ -3,16 +3,9 @@ require '***REMOVED***/***REMOVED***/encryptor'
 
 RSpec.describe ***REMOVED***::***REMOVED***::Encryptor do
   let(:message_to_encrypt) { "foo" }
-
-  let(:asserted_cipher_text) {
-    {
-      "secret" => "ukefRgMGCPQ=",
-      "bigsecret" => "UVknqKbLU8g="
-    }
-  }
-
   let(:encryption_key) { "secret" }
   let(:env_encryption_key) { encryption_key }
+  let(:asserted_cipher_text) { "\"2adEaJtIUH/lfrvZXgynEsndnbStRy5R.zCZ/epbFpZM=\"" }
 
   before do
     setup_scenario
@@ -32,37 +25,24 @@ RSpec.describe ***REMOVED***::***REMOVED***::Encryptor do
     expect(result).to eq(asserted_result)
   end
 
-  describe "#encrypt(message, key = encryption_key)" do
-    let(:result) { subject.encrypt(*args) }
-
-    context "passing only the message" do
-      let(:args) { [message_to_encrypt] }
-      let(:asserted_result) { asserted_cipher_text[env_encryption_key] }
-      it { assert_result! }
-    end
-
-    context "passing a key" do
-      let(:args) { [message_to_encrypt, "bigsecret"] }
-      let(:asserted_result) {  asserted_cipher_text["bigsecret"] }
-      it { assert_result! }
+  def freeze_time(&block)
+    Timecop.freeze(Time.local(2015, 9, 30, 22, 10, 10, 10)) do
+      yield
     end
   end
 
-  describe "#decrypt(message, key = encryption_key)" do
-    let(:result) { subject.decrypt(*args) }
+  describe "#encrypt_body(body)" do
+    let(:result) { freeze_time { subject.encrypt_body(message_to_encrypt) } }
+    let(:asserted_result) { asserted_cipher_text }
+    it { assert_result! }
+  end
+
+  describe "#decrypt_body(encrypted_body)" do
+    let(:encrypted_body) { asserted_cipher_text }
+    let(:result) { subject.decrypt_body(encrypted_body) }
     let(:asserted_result) { message_to_encrypt }
 
-    context "passing only the message" do
-      let(:args) { [message_to_decrypt] }
-      let(:message_to_decrypt) { asserted_cipher_text[env_encryption_key] }
-      it { assert_result! }
-    end
-
-    context "passing a key" do
-      let(:args) { [message_to_decrypt, "bigsecret"] }
-      let(:message_to_decrypt) { asserted_cipher_text["bigsecret"] }
-      it { assert_result! }
-    end
+    it { assert_result! }
   end
 
   describe "#encryption_key" do

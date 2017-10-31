@@ -15,4 +15,4 @@ request = ***REMOVED***::***REMOVED***::Request::GetAccountListByAtmCardNumber.n
 
 response = request.execute!
 
-puts(response.body)
+puts(response.parsed_body)

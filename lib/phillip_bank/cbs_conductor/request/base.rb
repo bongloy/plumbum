@@ -5,7 +5,6 @@ require "***REMOVED***/***REMOVED***/encryptor"
 class ***REMOVED***::***REMOVED***::Request::Base
   DEFAULT_BASE_URL = "http://localhost:14243/api_v01/api"
   DEFAULT_CONTENT_TYPE = "application/json"
-  LOCAL_TIMEZONE = "+07:00"
 
   attr_accessor :client,
                 :base_url,
@@ -67,10 +66,6 @@ class ***REMOVED***::***REMOVED***::Request::Base
 
   private
 
-  def timestamp
-    Time.now.getlocal(LOCAL_TIMEZONE).strftime("%Y%m%d%H%M%S%L")
-  end
-
   def basic_auth
     {
       :username => basic_auth_user,
@@ -82,17 +77,9 @@ class ***REMOVED***::***REMOVED***::Request::Base
     DEFAULT_CONTENT_TYPE
   end
 
-  def encrypted_body
-    encrypted_timestamp = encryptor.encrypt(timestamp)
-    encrypted_body = encryptor.encrypt(body, encryptor.encryption_key + encrypted_timestamp)
-    encrypted_timestamp_with_body = [encrypted_timestamp, encrypted_body].join(".")
-    # body needs to be double quoted
-    "\"#{encrypted_timestamp_with_body}\""
-  end
-
   def client_options
     {
-      :body => encrypted_body,
+      :body => encryptor.encrypt_body(body),
       :headers => headers,
       :basic_auth => basic_auth
     }

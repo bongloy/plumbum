@@ -4,11 +4,36 @@ require 'base64'
 class ***REMOVED***::***REMOVED***::Encryptor
   ENCRYPTION_ALGORITHM = "des-ede3"
   DEFAULT_ENCRYPTION_KEY = "test"
+  LOCAL_TIMEZONE = "+07:00"
 
   attr_accessor :encryption_key
 
   def initialize(options = {})
     self.encryption_key = options[:encryption_key]
+  end
+
+  def encryption_key
+    @encryption_key ||= ENV["***REMOVED***_***REMOVED***_ENCRYPTION_KEY"] || DEFAULT_ENCRYPTION_KEY
+  end
+
+  def encrypt_body(body)
+    encrypted_timestamp = encrypt(timestamp)
+    encrypted_body = encrypt(body, encryption_key + encrypted_timestamp)
+    encrypted_timestamp_with_body = [encrypted_timestamp, encrypted_body].join(".")
+    # body needs to be double quoted
+    "\"#{encrypted_timestamp_with_body}\""
+  end
+
+  def decrypt_body(encrypted_body)
+    encrypted_timestamp, encrypted_body = encrypted_body.sub(/^"/, "").sub(/"$/, "").split(".")
+    decrypted_timestamp = decrypt(encrypted_timestamp)
+    decrypt(encrypted_body, encryption_key + encrypted_timestamp)
+  end
+
+  private
+
+  def timestamp
+    Time.now.getlocal(LOCAL_TIMEZONE).strftime("%Y%m%d%H%M%S%L")
   end
 
   def encrypt(message, key = encryption_key)
@@ -22,12 +47,6 @@ class ***REMOVED***::***REMOVED***::Encryptor
     cipher.decrypt
     cipher.update(Base64.decode64(message)) + cipher.final
   end
-
-  def encryption_key
-    @encryption_key ||= ENV["***REMOVED***_***REMOVED***_ENCRYPTION_KEY"] || DEFAULT_ENCRYPTION_KEY
-  end
-
-  private
 
   def setup_cipher(key)
     cipher = OpenSSL::Cipher.new(encryption_algorithm)

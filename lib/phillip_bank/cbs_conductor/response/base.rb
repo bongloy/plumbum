@@ -35,13 +35,7 @@ class ***REMOVED***::***REMOVED***::Response::Base
   private
 
   def decrypted_body
-    @decrypted_body ||= decrypt_body
-  end
-
-  def decrypt_body
-    encrypted_timestamp, encrypted_body = raw_response.body.sub(/^"/, "").sub(/"$/, "").split(".")
-    decrypted_timestamp = encryptor.decrypt(encrypted_timestamp)
-    encryptor.decrypt(encrypted_body, encryptor.encryption_key + encrypted_timestamp)
+    @decrypted_body ||= encryptor.decrypt_body(raw_response.body)
   end
 
   def encryptor

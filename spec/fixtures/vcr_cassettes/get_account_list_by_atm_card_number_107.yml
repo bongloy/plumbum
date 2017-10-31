@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:14243/api_v01/api/GetAccountListByATMCardNo
+    body:
+      encoding: UTF-8
+      string: '"D3yuLS2R5KimspYCXi+LYThNLD4r7bUb.TgsgHEFcsEVtJq4WbADd/bhYxwYE87di"'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Api-Key:
+      - ***REMOVED******REMOVED***
+      Authorization:
+      - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 31 Oct 2017 10:17:10 GMT
+      Content-Length:
+      - '187'
+    body:
+      encoding: UTF-8
+      string: '"D3yuLS2R5KiikyNqlMpF3EayKj/EZG5L.lAjdh1aUNENuOo2Ap3A97/V+zAuf1A4UL6q9Uc8oUSZLv7mEfMtPMeFvGhlOzy+drOfv0JivIfJEGQFW4CQrf25NiSYZyDF3gijg6rHgW8moQ0NSKdEXT/9cGBZTb8BLhweKsuM0Kf6vtDvIeNVUNw=="'
+    http_version: 
+  recorded_at: Tue, 31 Oct 2017 10:17:20 GMT
+recorded_with: VCR 3.0.3
