@@ -11,7 +11,7 @@ require '***REMOVED***/***REMOVED***/request/otp'
 
 request = ***REMOVED***::***REMOVED***::Request::OTP.new(
   :account_number => "000010100280303",
-  :phone_number => "85510533537"
+  :phone_number => "855975148888"
 )
 
 response = request.execute!
