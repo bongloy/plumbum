@@ -25,6 +25,6 @@ module ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
     expect(user).to eq(assertion_helper.asserted_basic_auth_user)
     expect(password).to eq(assertion_helper.asserted_basic_auth_password)
     expect(response.successful?).to eq(asserted_successful)
-    expect(JSON.parse(decrypted_request_body)).to eq(subject.to_hash)
+    expect(JSON.parse(decrypted_request_body)).to eq(subject.to_h)
   end
 end

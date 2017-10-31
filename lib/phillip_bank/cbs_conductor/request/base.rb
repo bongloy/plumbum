@@ -29,7 +29,7 @@ class ***REMOVED***::***REMOVED***::Request::Base
   end
 
   def to_json
-    to_hash.to_json
+    to_h.to_json
   end
 
   def url

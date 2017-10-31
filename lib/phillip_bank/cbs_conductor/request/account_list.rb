@@ -12,7 +12,7 @@ class ***REMOVED***::***REMOVED***::Request::AccountList < ***REMOVED***::***REM
     self.atm_card_number = options[:atm_card_number]
   end
 
-  def to_hash
+  def to_h
     {
       "ATMCardNo" => atm_card_number
     }

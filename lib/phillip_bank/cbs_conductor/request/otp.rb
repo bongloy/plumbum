@@ -13,7 +13,7 @@ class ***REMOVED***::***REMOVED***::Request::OTP < ***REMOVED***::***REMOVED***:
     self.phone_number = options[:phone_number]
   end
 
-  def to_hash
+  def to_h
     {
       "AccountNo" => account_number,
       "PhoneNo" => phone_number

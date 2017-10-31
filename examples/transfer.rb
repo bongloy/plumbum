@@ -6,8 +6,9 @@ require 'dotenv'
 Dotenv.load
 
 require 'pry'
-
 require '***REMOVED***/***REMOVED***/request/transfer'
+
+require 'money'
 
 request = ***REMOVED***::***REMOVED***::Request::Transfer.new(
   :account_number => "000010100280303",
