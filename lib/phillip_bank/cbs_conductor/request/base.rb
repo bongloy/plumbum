@@ -94,8 +94,7 @@ class ***REMOVED***::***REMOVED***::Request::Base
     {
       :body => encrypted_body,
       :headers => headers,
-      :basic_auth => basic_auth,
-      :debug_output => $stdout
+      :basic_auth => basic_auth
     }
   end
 

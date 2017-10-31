@@ -15,3 +15,5 @@
 /vendor/ruby/
 
 .env
+
+remove_focus.rb
