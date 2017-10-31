@@ -12,10 +12,6 @@ class ***REMOVED***::***REMOVED***::Response::Base
     self.raw_response = options[:raw_response]
   end
 
-  def code
-    raw_response && raw_response.code
-  end
-
   def body
     decrypted_body
   end
