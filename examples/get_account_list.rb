@@ -7,9 +7,9 @@ Dotenv.load
 
 require 'pry'
 
-require '***REMOVED***/***REMOVED***/request/get_account_list_by_atm_card_number'
+require '***REMOVED***/***REMOVED***/request/account_list'
 
-request = ***REMOVED***::***REMOVED***::Request::GetAccountListByAtmCardNumber.new(
+request = ***REMOVED***::***REMOVED***::Request::AccountList.new(
   :atm_card_number => "3333668800064418"
 )
 

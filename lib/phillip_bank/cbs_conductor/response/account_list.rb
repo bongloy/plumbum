@@ -1,6 +1,6 @@
 require "***REMOVED***/***REMOVED***/response/base"
 
-class ***REMOVED***::***REMOVED***::Response::GetAccountListByAtmCardNumber < ***REMOVED***::***REMOVED***::Response::Base
+class ***REMOVED***::***REMOVED***::Response::AccountList < ***REMOVED***::***REMOVED***::Response::Base
   def name
     parsed_body["Name"]
   end

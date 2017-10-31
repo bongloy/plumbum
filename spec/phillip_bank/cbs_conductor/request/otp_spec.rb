@@ -1,8 +1,8 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/request/send_otp'
+require '***REMOVED***/***REMOVED***/request/otp'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Request::SendOTP do
-  describe "#execute!", :vcr, :cassette => :send_otp_110 do
+RSpec.describe ***REMOVED***::***REMOVED***::Request::OTP do
+  describe "#execute!", :vcr do
     include ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
 
     let(:response) { subject.execute! }
@@ -26,7 +26,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::SendOTP do
 
     def assert_execute!
       super
-      expect(response).to be_a(***REMOVED***::***REMOVED***::Response::SendOTP)
+      expect(response).to be_a(***REMOVED***::***REMOVED***::Response::OTP)
     end
 
     context "successful request" do
