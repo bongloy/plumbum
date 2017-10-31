@@ -5,7 +5,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Encryptor do
   let(:message_to_encrypt) { "foo" }
   let(:encryption_key) { "secret" }
   let(:env_encryption_key) { encryption_key }
-  let(:asserted_cipher_text) { "\"2adEaJtIUH/lfrvZXgynEsndnbStRy5R.zCZ/epbFpZM=\"" }
+  let(:asserted_cipher_text) { "\"1J2825n0IUw6DfeGJnSeKMndnbStRy5R.dNZ5OoSgB0I=\"" }
 
   before do
     setup_scenario
@@ -26,7 +26,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Encryptor do
   end
 
   def freeze_time(&block)
-    Timecop.freeze(Time.local(2015, 9, 30, 22, 10, 10, 10)) do
+    Timecop.freeze(Time.utc(2015, 9, 30, 22, 10, 10, 10)) do
       yield
     end
   end
