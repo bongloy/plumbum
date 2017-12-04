@@ -29,16 +29,10 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::OTP do
       expect(response).to be_a(***REMOVED***::***REMOVED***::Response::OTP)
     end
 
-    context "successful request", :focus, :cassette => :send_otp do
+    context "successful request", :cassette => :send_otp do
       let(:asserted_successful) { true }
       let(:account_number) { "000010100280303" }
       let(:phone_number) { "855715100860" }
-
-      def assert_execute!
-        super
-        expect(response).to be_successful
-      end
-
       it { assert_execute! }
     end
 

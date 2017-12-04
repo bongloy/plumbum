@@ -6,21 +6,35 @@ require 'dotenv'
 Dotenv.load
 
 require 'pry'
+require '***REMOVED***/***REMOVED***/request/otp'
 require '***REMOVED***/***REMOVED***/request/transfer'
-
 require 'money'
 
-request = ***REMOVED***::***REMOVED***::Request::Transfer.new(
-  :account_number => "000010100280303",
-  :amount => Money.new(
-    1000, "USD"
-  ),
-  :identifier => "123456",
-  :remark => "Some text",
-  :otp => "123456",
-  :fee => nil
+account_number = "000010100280303"
+phone_number = "855715100860"
+
+otp_request = ***REMOVED***::***REMOVED***::Request::OTP.new(
+  :account_number => account_number,
+  :phone_number => phone_number
 )
 
-response = request.execute!
+otp_response = otp_request.execute!
 
-puts(response.parsed_body)
+if otp_response.successful?
+  puts("Enter OTP:")
+  otp = gets.chomp
+
+    request = ***REMOVED***::***REMOVED***::Request::Transfer.new(
+    :account_number => account_number,
+    :amount => Money.new(
+      1000, "USD"
+    ),
+    :otp => otp
+  )
+
+  response = request.execute!
+
+  puts(response.parsed_body)
+else
+  puts "OTP request error"
+end

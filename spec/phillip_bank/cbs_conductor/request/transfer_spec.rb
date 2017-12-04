@@ -7,7 +7,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
   let(:currency) { "USD" }
   let(:account_number) { "000010100280303" }
   let(:amount) { Money.new(1000, currency) }
-  let(:otp) { "12345" }
+  let(:otp) { "123456" }
   let(:identifier) { nil }
   let(:description) { nil }
   let(:fee) { nil }
@@ -28,6 +28,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
   describe "#to_h" do
     let(:result) { subject.to_h }
     let(:asserted_identifier) { subject.identifier }
+    let(:asserted_remark) { asserted_identifier }
 
     def asserted_keys
       {
@@ -35,7 +36,8 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
         "Currency" => nil,
         "Amount" => nil,
         "UniqueID" => nil,
-        "OTPCode" => nil
+        "OTPCode" => nil,
+        "Remark" => nil
       }
     end
 
@@ -46,6 +48,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
       expect(result["Amount"]).to eq("10.0")
       expect(result["UniqueID"]).to eq(asserted_identifier)
       expect(result["OTPCode"]).to eq(otp)
+      expect(result["Remark"]).to eq(asserted_remark)
     end
 
     context "by default" do
@@ -76,19 +79,9 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
 
     context "description is specified" do
       let(:description) { "foo bar baz" }
-
-      def asserted_keys
-        super.merge("Remark" => nil)
-      end
-
-      def assert_to_h!
-        super
-        expect(result["Remark"]).to eq(description)
-      end
-
+      let(:asserted_remark) { description }
       it { assert_to_h! }
     end
-
   end
 
   describe "#identifier" do
@@ -113,8 +106,9 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
       expect(response).to be_a(***REMOVED***::***REMOVED***::Response::Transfer)
     end
 
-    context "successful request" do
+    context "successful request", :cassette => :transfer do
       let(:asserted_successful) { true }
+#      it { assert_execute! }
     end
 
     context "error 108", :cassette => :transfer_108 do
@@ -124,6 +118,18 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
         super
         expect(response.error_code).to eq("108")
         expect(response.error_message).to eq("Token is expired")
+      end
+
+      it { assert_execute! }
+    end
+
+    context "error 110", :cassette => :transfer_110 do
+      let(:asserted_successful) { false }
+
+      def assert_execute!
+        super
+        expect(response.error_code).to eq("110")
+        expect(response.error_message).to eq("Failed to Process Transaction")
       end
 
       it { assert_execute! }

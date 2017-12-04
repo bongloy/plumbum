@@ -32,6 +32,10 @@ class ***REMOVED***::***REMOVED***::Request::Transfer < ***REMOVED***::***REMOVE
     @identifier ||= SecureRandom.uuid
   end
 
+  def description
+    @description ||= identifier
+  end
+
   private
 
   def default_parameters
@@ -40,14 +44,14 @@ class ***REMOVED***::***REMOVED***::Request::Transfer < ***REMOVED***::***REMOVE
       "Currency" => request_currency,
       "Amount" => request_amount,
       "UniqueID" => identifier,
-      "OTPCode" => otp
+      "OTPCode" => otp,
+      "Remark" => description
     }
   end
 
   def optional_parameters
     {
-      "Fee" => request_fee,
-      "Remark" => description
+      "Fee" => request_fee
     }
   end
 
