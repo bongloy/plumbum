@@ -13,7 +13,7 @@ class Plumbum::Encryptor
   end
 
   def encryption_key
-    @encryption_key ||= ENV["***REMOVED***_***REMOVED***_ENCRYPTION_KEY"] || DEFAULT_ENCRYPTION_KEY
+    @encryption_key ||= ENV["PLUMBUM_ENCRYPTION_KEY"] || DEFAULT_ENCRYPTION_KEY
   end
 
   def encrypt_body(body)

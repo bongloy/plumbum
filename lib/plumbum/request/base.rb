@@ -37,19 +37,19 @@ class Plumbum::Request::Base
   end
 
   def base_url
-    @base_url ||= ENV["***REMOVED***_***REMOVED***_BASE_URL"] || DEFAULT_BASE_URL
+    @base_url ||= ENV["PLUMBUM_BASE_URL"] || DEFAULT_BASE_URL
   end
 
   def basic_auth_user
-    @basic_auth_user ||= ENV["***REMOVED***_***REMOVED***_BASIC_AUTH_USER"]
+    @basic_auth_user ||= ENV["PLUMBUM_BASIC_AUTH_USER"]
   end
 
   def basic_auth_password
-    @basic_auth_password ||= ENV["***REMOVED***_***REMOVED***_BASIC_AUTH_PASSWORD"]
+    @basic_auth_password ||= ENV["PLUMBUM_BASIC_AUTH_PASSWORD"]
   end
 
   def api_key
-    @api_key ||= ENV["***REMOVED***_***REMOVED***_API_KEY"]
+    @api_key ||= ENV["PLUMBUM_API_KEY"]
   end
 
   def body

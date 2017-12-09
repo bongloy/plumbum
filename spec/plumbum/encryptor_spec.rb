@@ -17,7 +17,7 @@ RSpec.describe Plumbum::Encryptor do
 
   def env
     {
-      "***REMOVED***_***REMOVED***_ENCRYPTION_KEY" => env_encryption_key
+      "PLUMBUM_ENCRYPTION_KEY" => env_encryption_key
     }
   end
 
@@ -48,14 +48,14 @@ RSpec.describe Plumbum::Encryptor do
   describe "#encryption_key" do
     let(:result) { subject.encryption_key }
 
-    context "***REMOVED***_***REMOVED***_ENCRYPTION_KEY=" do
+    context "PLUMBUM_ENCRYPTION_KEY=" do
       let(:env_encryption_key) { nil }
       let(:asserted_result) { described_class::DEFAULT_ENCRYPTION_KEY }
 
       it { assert_result! }
     end
 
-    context "***REMOVED***_***REMOVED***_ENCRYPTION_KEY=secret" do
+    context "PLUMBUM_ENCRYPTION_KEY=secret" do
       let(:asserted_result) { env_encryption_key }
 
       it { assert_result! }

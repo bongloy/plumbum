@@ -1,19 +1,19 @@
 require "bundler/setup"
-require '***REMOVED***/***REMOVED***'
+require 'plumbum'
 
 # load the ENV
 require 'dotenv'
 Dotenv.load
 
 require 'pry'
-require '***REMOVED***/***REMOVED***/request/otp'
-require '***REMOVED***/***REMOVED***/request/transfer'
+require 'plumbum/request/otp'
+require 'plumbum/request/transfer'
 require 'money'
 
 account_number = "000050100062708"
 phone_number = "855715100860"
 
-otp_request = ***REMOVED***::***REMOVED***::Request::OTP.new(
+otp_request = Plumbum::Request::OTP.new(
   :account_number => account_number,
   :phone_number => phone_number
 )
@@ -24,7 +24,7 @@ if otp_response.successful?
   puts("Enter OTP:")
   otp = gets.chomp
 
-    request = ***REMOVED***::***REMOVED***::Request::Transfer.new(
+    request = Plumbum::Request::Transfer.new(
     :account_number => account_number,
     :amount => Money.new(
       1000, "USD"

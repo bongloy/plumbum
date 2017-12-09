@@ -1,5 +1,5 @@
 require "bundler/setup"
-require '***REMOVED***/***REMOVED***'
+require 'plumbum'
 
 # load the ENV
 require 'dotenv'
@@ -7,9 +7,9 @@ Dotenv.load
 
 require 'pry'
 
-require '***REMOVED***/***REMOVED***/request/otp'
+require 'plumbum/request/otp'
 
-request = ***REMOVED***::***REMOVED***::Request::OTP.new(
+request = Plumbum::Request::OTP.new(
   :account_number => "000010100280303",
   :phone_number => "855715100860"
 )

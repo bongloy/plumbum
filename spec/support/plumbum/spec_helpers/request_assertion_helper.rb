@@ -6,14 +6,14 @@ class Plumbum::SpecHelpers::RequestAssertionHelper
   end
 
   def asserted_api_key
-    ENV["***REMOVED***_***REMOVED***_API_KEY"]
+    ENV["PLUMBUM_API_KEY"]
   end
 
   def asserted_basic_auth_user
-    ENV["***REMOVED***_***REMOVED***_BASIC_AUTH_USER"]
+    ENV["PLUMBUM_BASIC_AUTH_USER"]
   end
 
   def asserted_basic_auth_password
-    ENV["***REMOVED***_***REMOVED***_BASIC_AUTH_PASSWORD"]
+    ENV["PLUMBUM_BASIC_AUTH_PASSWORD"]
   end
 end
