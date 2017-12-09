@@ -1,6 +1,6 @@
 # Plumbum
 
-[![Build Status](https://travis-ci.org/bongloy/plumbum.svg)](https://travis-ci.org/bongloy/plumbum)
+[![Build Status](https://travis-ci.org/bongloy/plumbum.svg?branch=master)](https://travis-ci.org/bongloy/plumbum)
 [![Test Coverage](https://codeclimate.com/github/bongloy/plumbum/badges/coverage.svg)](https://codeclimate.com/github/bongloy/plumbum/coverage)
 [![Code Climate](https://codeclimate.com/github/bongloy/plumbum/badges/gpa.svg)](https://codeclimate.com/github/bongloy/plumbum)
 
