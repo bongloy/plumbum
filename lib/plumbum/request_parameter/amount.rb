@@ -1,6 +1,6 @@
-require "***REMOVED***/***REMOVED***/request_parameter"
+require "plumbum/request_parameter"
 
-class ***REMOVED***::***REMOVED***::RequestParameter::Amount
+class Plumbum::RequestParameter::Amount
   require 'money'
 
   def to_s(money)

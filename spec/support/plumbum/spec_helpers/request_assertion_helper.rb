@@ -1,4 +1,4 @@
-class ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertionHelper
+class Plumbum::SpecHelpers::RequestAssertionHelper
   ASSERTED_CONTENT_TYPE = "application/json"
 
   def asserted_content_type

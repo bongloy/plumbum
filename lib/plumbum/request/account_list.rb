@@ -1,9 +1,9 @@
-require "***REMOVED***/***REMOVED***/request/base"
-require "***REMOVED***/***REMOVED***/response/account_list"
+require "plumbum/request/base"
+require "plumbum/response/account_list"
 
-class ***REMOVED***::***REMOVED***::Request::AccountList < ***REMOVED***::***REMOVED***::Request::Base
+class Plumbum::Request::AccountList < Plumbum::Request::Base
   ENDPOINT = "GetAccountListByATMCardNo"
-  RESPONSE_TYPE = ***REMOVED***::***REMOVED***::Response::AccountList
+  RESPONSE_TYPE = Plumbum::Response::AccountList
 
   attr_accessor :atm_card_number
 

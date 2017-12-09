@@ -1,9 +1,9 @@
-require "***REMOVED***/***REMOVED***/request/base"
-require "***REMOVED***/***REMOVED***/response/otp"
+require "plumbum/request/base"
+require "plumbum/response/otp"
 
-class ***REMOVED***::***REMOVED***::Request::OTP < ***REMOVED***::***REMOVED***::Request::Base
+class Plumbum::Request::OTP < Plumbum::Request::Base
   ENDPOINT = "SendOTPCodeByAccountNo"
-  RESPONSE_TYPE = ***REMOVED***::***REMOVED***::Response::OTP
+  RESPONSE_TYPE = Plumbum::Response::OTP
 
   attr_accessor :account_number, :phone_number
 

@@ -1,6 +1,6 @@
 require_relative "base"
 
-class ***REMOVED***::***REMOVED***::ResponseElement::Account < ***REMOVED***::***REMOVED***::ResponseElement::Base
+class Plumbum::ResponseElement::Account < Plumbum::ResponseElement::Base
   require 'money'
 
   PRIMARY = "Y"

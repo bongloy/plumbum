@@ -1,8 +1,8 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/response/transfer'
+require 'plumbum/response/transfer'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Response::Transfer do
-  include ***REMOVED***::***REMOVED***::SpecHelpers::ResponseHelpers
+RSpec.describe Plumbum::Response::Transfer do
+  include Plumbum::SpecHelpers::ResponseHelpers
 
   # assertions from VCR cassette response
 

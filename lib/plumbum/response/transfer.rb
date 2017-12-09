@@ -1,6 +1,6 @@
-require "***REMOVED***/***REMOVED***/response/base"
+require "plumbum/response/base"
 
-class ***REMOVED***::***REMOVED***::Response::Transfer < ***REMOVED***::***REMOVED***::Response::Base
+class Plumbum::Response::Transfer < Plumbum::Response::Base
   def account_number
     parsed_body["SAccountNo"]
   end

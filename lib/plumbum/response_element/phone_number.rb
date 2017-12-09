@@ -1,6 +1,6 @@
 require_relative "base"
 
-class ***REMOVED***::***REMOVED***::ResponseElement::PhoneNumber < ***REMOVED***::***REMOVED***::ResponseElement::Base
+class Plumbum::ResponseElement::PhoneNumber < Plumbum::ResponseElement::Base
   attr_accessor :phone_number
 
   def initialize(options = {})

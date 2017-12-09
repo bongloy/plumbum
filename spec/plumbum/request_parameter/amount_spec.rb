@@ -1,7 +1,7 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/request_parameter/amount'
+require 'plumbum/request_parameter/amount'
 
-RSpec.describe ***REMOVED***::***REMOVED***::RequestParameter::Amount do
+RSpec.describe Plumbum::RequestParameter::Amount do
   describe "#to_s(money)" do
     let(:amount_cents) { "50045" }
     let(:amount) { Money.new(amount_cents, currency) }

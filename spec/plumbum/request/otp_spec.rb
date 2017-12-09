@@ -1,9 +1,9 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/request/otp'
+require 'plumbum/request/otp'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Request::OTP do
+RSpec.describe Plumbum::Request::OTP do
   describe "#execute!", :vcr do
-    include ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
+    include Plumbum::SpecHelpers::RequestAssertions
 
     let(:response) { subject.execute! }
 
@@ -26,7 +26,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::OTP do
 
     def assert_execute!
       super
-      expect(response).to be_a(***REMOVED***::***REMOVED***::Response::OTP)
+      expect(response).to be_a(Plumbum::Response::OTP)
     end
 
     context "successful request", :cassette => :send_otp do

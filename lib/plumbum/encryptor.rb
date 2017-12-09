@@ -1,7 +1,7 @@
 require 'openssl'
 require 'base64'
 
-class ***REMOVED***::***REMOVED***::Encryptor
+class Plumbum::Encryptor
   ENCRYPTION_ALGORITHM = "des-ede3"
   DEFAULT_ENCRYPTION_KEY = "test"
   LOCAL_TIMEZONE = "+07:00"

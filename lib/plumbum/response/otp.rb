@@ -1,4 +1,4 @@
-require "***REMOVED***/***REMOVED***/response/base"
+require "plumbum/response/base"
 
-class ***REMOVED***::***REMOVED***::Response::OTP < ***REMOVED***::***REMOVED***::Response::Base
+class Plumbum::Response::OTP < Plumbum::Response::Base
 end

@@ -1,7 +1,7 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/response_element/phone_number'
+require 'plumbum/response_element/phone_number'
 
-RSpec.describe ***REMOVED***::***REMOVED***::ResponseElement::PhoneNumber do
+RSpec.describe Plumbum::ResponseElement::PhoneNumber do
   subject { described_class.new(attributes) }
 
   let(:phone_number) { "85510533537" }

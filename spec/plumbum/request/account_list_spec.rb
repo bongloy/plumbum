@@ -1,10 +1,10 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/request/account_list'
+require 'plumbum/request/account_list'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Request::AccountList do
+RSpec.describe Plumbum::Request::AccountList do
   describe "#execute!", :vcr do
 
-    include ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
+    include Plumbum::SpecHelpers::RequestAssertions
     let(:response) { subject.execute! }
 
     def attributes
@@ -25,7 +25,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::AccountList do
 
     def assert_execute!
       super
-      expect(response).to be_a(***REMOVED***::***REMOVED***::Response::AccountList)
+      expect(response).to be_a(Plumbum::Response::AccountList)
     end
 
     context "successful request", :cassette => :account_list do

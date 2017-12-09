@@ -1,6 +1,6 @@
-require "***REMOVED***/***REMOVED***/response_element"
+require "plumbum/response_element"
 
-class ***REMOVED***::***REMOVED***::ResponseElement::Base
+class Plumbum::ResponseElement::Base
   def initialize(options = {})
   end
 end

@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "***REMOVED***/***REMOVED***/version"
+require "plumbum/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "***REMOVED***-***REMOVED***"
-  spec.version       = ***REMOVED***::***REMOVED***::VERSION
+  spec.name          = "plumbum"
+  spec.version       = Plumbum::VERSION
   spec.authors       = ["David Wilkie"]
   spec.email         = ["dwilkie@gmail.com"]
 
-  spec.summary       = %q{A Ruby Client for the ***REMOVED*** CBS Conductor API}
-  spec.description   = %q{A Ruby Client for the ***REMOVED*** CBS Conductor API}
-  spec.homepage      = "https://github.com/dwilkie/***REMOVED***-***REMOVED***"
+  spec.summary       = %q{A Ruby Client for the Plumbum API}
+  spec.description   = %q{A Ruby Client for the Plumbum API}
+  spec.homepage      = "https://github.com/bongloy/plumbum"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

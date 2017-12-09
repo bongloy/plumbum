@@ -1,10 +1,10 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/response/account_list'
-require '***REMOVED***/***REMOVED***/response_element/account'
-require '***REMOVED***/***REMOVED***/response_element/phone_number'
+require 'plumbum/response/account_list'
+require 'plumbum/response_element/account'
+require 'plumbum/response_element/phone_number'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Response::AccountList do
-  include ***REMOVED***::***REMOVED***::SpecHelpers::ResponseHelpers
+RSpec.describe Plumbum::Response::AccountList do
+  include Plumbum::SpecHelpers::ResponseHelpers
 
   # assertions from VCR cassette response
 
@@ -37,7 +37,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Response::AccountList do
       accounts = subject.accounts
       expect(accounts).to be_a(Array)
       account = accounts.first
-      expect(account).to be_a(***REMOVED***::***REMOVED***::ResponseElement::Account)
+      expect(account).to be_a(Plumbum::ResponseElement::Account)
       expect(account.number).to eq("000010100280303")
       expect(account.currency.to_s).to eq("USD")
       expect(account.primary).to eq("Y")
@@ -49,7 +49,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Response::AccountList do
       phone_numbers = subject.phone_numbers
       expect(phone_numbers).to be_a(Array)
       phone_number = subject.phone_numbers.first
-      expect(phone_number).to be_a(***REMOVED***::***REMOVED***::ResponseElement::PhoneNumber)
+      expect(phone_number).to be_a(Plumbum::ResponseElement::PhoneNumber)
       expect(phone_numbers.map(&:phone_number)).to match_array(["85510533537", "85517664614", "855715100860", "855975148888"])
     }
   end

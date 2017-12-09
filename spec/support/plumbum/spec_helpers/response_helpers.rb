@@ -1,6 +1,6 @@
-module ***REMOVED***::***REMOVED***::SpecHelpers::ResponseHelpers
+module Plumbum::SpecHelpers::ResponseHelpers
   def response_builder
-    @response_builder ||= ***REMOVED***::***REMOVED***::SpecHelpers::ResponseBuilder.new
+    @response_builder ||= Plumbum::SpecHelpers::ResponseBuilder.new
   end
 
   def build_raw_response(fixture_filename)

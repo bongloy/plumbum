@@ -1,4 +1,4 @@
-module ***REMOVED***::***REMOVED***
+module Plumbum
   module Request
   end
 end

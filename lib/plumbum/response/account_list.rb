@@ -1,6 +1,6 @@
-require "***REMOVED***/***REMOVED***/response/base"
+require "plumbum/response/base"
 
-class ***REMOVED***::***REMOVED***::Response::AccountList < ***REMOVED***::***REMOVED***::Response::Base
+class Plumbum::Response::AccountList < Plumbum::Response::Base
   def name
     parsed_body["Name"]
   end
@@ -10,10 +10,10 @@ class ***REMOVED***::***REMOVED***::Response::AccountList < ***REMOVED***::***RE
   end
 
   def accounts
-    @accounts ||= parsed_body["Accounts"].map { |account| ***REMOVED***::***REMOVED***::ResponseElement::Account.new(account) }
+    @accounts ||= parsed_body["Accounts"].map { |account| Plumbum::ResponseElement::Account.new(account) }
   end
 
   def phone_numbers
-    @phone_numbers ||= parsed_body["Phones"].map { |phone_number| ***REMOVED***::***REMOVED***::ResponseElement::PhoneNumber.new(phone_number) }
+    @phone_numbers ||= parsed_body["Phones"].map { |phone_number| Plumbum::ResponseElement::PhoneNumber.new(phone_number) }
   end
 end

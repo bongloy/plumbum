@@ -1,7 +1,7 @@
-require "***REMOVED***/***REMOVED***/response"
-require "***REMOVED***/***REMOVED***/encryptor"
+require "plumbum/response"
+require "plumbum/encryptor"
 
-class ***REMOVED***::***REMOVED***::Response::Base
+class Plumbum::Response::Base
   ERROR_CODES = {
     :successful => "00"
   }
@@ -39,6 +39,6 @@ class ***REMOVED***::***REMOVED***::Response::Base
   end
 
   def encryptor
-    @encryptor ||= ***REMOVED***::***REMOVED***::Encryptor.new
+    @encryptor ||= Plumbum::Encryptor.new
   end
 end

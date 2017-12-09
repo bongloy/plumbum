@@ -1,6 +1,6 @@
-module ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
+module Plumbum::SpecHelpers::RequestAssertions
   def assertion_helper
-    @assertion_helper ||= ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertionHelper.new
+    @assertion_helper ||= Plumbum::SpecHelpers::RequestAssertionHelper.new
   end
 
   def request
@@ -12,7 +12,7 @@ module ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
   end
 
   def encryptor
-    @encryptor ||= ***REMOVED***::***REMOVED***::Encryptor.new
+    @encryptor ||= Plumbum::Encryptor.new
   end
 
   def assert_execute!

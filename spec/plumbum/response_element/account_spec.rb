@@ -1,7 +1,7 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/response_element/account'
+require 'plumbum/response_element/account'
 
-RSpec.describe ***REMOVED***::***REMOVED***::ResponseElement::Account do
+RSpec.describe Plumbum::ResponseElement::Account do
   subject { described_class.new(attributes) }
 
   let(:account_number) { "000010100280303" }

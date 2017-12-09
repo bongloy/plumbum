@@ -1,6 +1,6 @@
 require 'httparty'
 
-class ***REMOVED***::***REMOVED***::Client
+class Plumbum::Client
   DEFAULT_HTTP_CLIENT = HTTParty
 
   attr_accessor :http_client

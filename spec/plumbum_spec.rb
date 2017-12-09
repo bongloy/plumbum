@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe ***REMOVED***::***REMOVED*** do
+RSpec.describe Plumbum do
   it "has a version number" do
-    expect(***REMOVED***::***REMOVED***::VERSION).not_to be nil
+    expect(Plumbum::VERSION).not_to be nil
   end
 end

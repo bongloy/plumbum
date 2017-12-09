@@ -1,7 +1,7 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/encryptor'
+require 'plumbum/encryptor'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Encryptor do
+RSpec.describe Plumbum::Encryptor do
   let(:message_to_encrypt) { "foo" }
   let(:encryption_key) { "secret" }
   let(:env_encryption_key) { encryption_key }

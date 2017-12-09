@@ -1,6 +1,4 @@
-module ***REMOVED***
-  module ***REMOVED***
-  end
+module Plumbum
 end
 
-require "***REMOVED***/***REMOVED***/version"
+require "plumbum/version"

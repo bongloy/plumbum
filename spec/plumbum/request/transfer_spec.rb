@@ -1,7 +1,7 @@
 require 'spec_helper'
-require '***REMOVED***/***REMOVED***/request/transfer'
+require 'plumbum/request/transfer'
 
-RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
+RSpec.describe Plumbum::Request::Transfer do
   require 'money'
 
   let(:currency) { "USD" }
@@ -89,7 +89,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
   end
 
   describe "#execute!", :vcr do
-    include ***REMOVED***::***REMOVED***::SpecHelpers::RequestAssertions
+    include Plumbum::SpecHelpers::RequestAssertions
 
     let(:response) { subject.execute! }
 
@@ -103,7 +103,7 @@ RSpec.describe ***REMOVED***::***REMOVED***::Request::Transfer do
 
     def assert_execute!
       super
-      expect(response).to be_a(***REMOVED***::***REMOVED***::Response::Transfer)
+      expect(response).to be_a(Plumbum::Response::Transfer)
     end
 
     context "successful request", :cassette => :transfer do

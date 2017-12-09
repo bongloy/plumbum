@@ -1,8 +1,8 @@
-require "***REMOVED***/***REMOVED***/request"
-require "***REMOVED***/***REMOVED***/client"
-require "***REMOVED***/***REMOVED***/encryptor"
+require "plumbum/request"
+require "plumbum/client"
+require "plumbum/encryptor"
 
-class ***REMOVED***::***REMOVED***::Request::Base
+class Plumbum::Request::Base
   DEFAULT_BASE_URL = "http://localhost:14243/api_v01/api"
   DEFAULT_CONTENT_TYPE = "application/json"
 
@@ -21,7 +21,7 @@ class ***REMOVED***::***REMOVED***::Request::Base
   end
 
   def client
-    @client ||= ***REMOVED***::***REMOVED***::Client.new
+    @client ||= Plumbum::Client.new
   end
 
   def execute!
@@ -94,6 +94,6 @@ class ***REMOVED***::***REMOVED***::Request::Base
   end
 
   def encryptor
-    @encryptor ||= ***REMOVED***::***REMOVED***::Encryptor.new
+    @encryptor ||= Plumbum::Encryptor.new
   end
 end

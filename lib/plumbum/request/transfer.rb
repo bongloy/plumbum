@@ -1,11 +1,11 @@
-require "***REMOVED***/***REMOVED***/request/base"
-require "***REMOVED***/***REMOVED***/response/transfer"
-require "***REMOVED***/***REMOVED***/request_parameter/amount"
+require "plumbum/request/base"
+require "plumbum/response/transfer"
+require "plumbum/request_parameter/amount"
 require "securerandom"
 
-class ***REMOVED***::***REMOVED***::Request::Transfer < ***REMOVED***::***REMOVED***::Request::Base
+class Plumbum::Request::Transfer < Plumbum::Request::Base
   ENDPOINT = "TransferOutAccount"
-  RESPONSE_TYPE = ***REMOVED***::***REMOVED***::Response::Transfer
+  RESPONSE_TYPE = Plumbum::Response::Transfer
 
   attr_accessor :account_number,
                 :amount,
@@ -60,11 +60,11 @@ class ***REMOVED***::***REMOVED***::Request::Transfer < ***REMOVED***::***REMOVE
   end
 
   def request_amount
-    @request_amount ||= ***REMOVED***::***REMOVED***::RequestParameter::Amount.new.to_s(amount) if amount
+    @request_amount ||= Plumbum::RequestParameter::Amount.new.to_s(amount) if amount
   end
 
   def request_fee
-    @request_fee ||= ***REMOVED***::***REMOVED***::RequestParameter::Amount.new.to_s(fee) if fee
+    @request_fee ||= Plumbum::RequestParameter::Amount.new.to_s(fee) if fee
   end
 end
 

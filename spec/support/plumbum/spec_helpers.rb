@@ -1,4 +1,4 @@
 module Plumbum
-  module ResponseElement
+  module SpecHelpers
   end
 end

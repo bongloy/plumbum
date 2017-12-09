@@ -1,4 +1,4 @@
-module ***REMOVED***::***REMOVED***
+module Plumbum
   module Response
   end
 end

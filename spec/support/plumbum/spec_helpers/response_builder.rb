@@ -1,4 +1,4 @@
-class ***REMOVED***::***REMOVED***::SpecHelpers::ResponseBuilder
+class Plumbum::SpecHelpers::ResponseBuilder
   require 'httparty'
 
   def from_vcr_response(options = {}, &block)
