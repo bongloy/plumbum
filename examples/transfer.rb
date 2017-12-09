@@ -10,7 +10,7 @@ require '***REMOVED***/***REMOVED***/request/otp'
 require '***REMOVED***/***REMOVED***/request/transfer'
 require 'money'
 
-account_number = "000010100280303"
+account_number = "000050100062708"
 phone_number = "855715100860"
 
 otp_request = ***REMOVED***::***REMOVED***::Request::OTP.new(
