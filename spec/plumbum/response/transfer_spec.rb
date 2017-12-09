@@ -6,7 +6,7 @@ RSpec.describe Plumbum::Response::Transfer do
 
   # assertions from VCR cassette response
 
-  let(:fixture_filename) { "transfer_108.yml" }
+  let(:fixture_filename) { "transfer_110.yml" }
 
   subject { build_response(fixture_filename) }
 
