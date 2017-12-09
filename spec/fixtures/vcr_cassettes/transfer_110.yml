@@ -2,22 +2,22 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:14243/api_v01/api/TransferOutAccount
+    uri: FILTERED_BASE_URL/TransferOutAccount
     body:
       encoding: UTF-8
       string: |-
-        "NPFcELAev/J+PDFVFbSU5um0BhpwYKQv.SJvFzQGjo6KOJPS+AQLd9qCGGROvPOeamdvuUGgWnDyFGL8QlLmZJKYWux3i
-        gqtvWusoPWJeISsq01luhp2avgEEesoaVhzliAZwykWsmejtIyNiLg/SbGpV
-        p0/cX6x8bliXqvp8JHPBVQDqNN/gxCMqmxZjqs545GpOXarerOSM4CAeNiIM
-        8noE5kMuJG6TxyB4hScIUXdFBLnOi9aIJucwMj640HKDBI6zp62zYAfzIz8L
-        kQGmkw=="
+        "oWhI/4jKD0OP1T08/FEmgKCua+sSHB5B.oud1o0eBCfUuTKV2lIpL2ukbA8g40ZvmkBu1gA75JpFmPEUP9uvpWCrwUxpb
+        m3F5F/ngPHkPlp/F5WbxZfqEU5Q32x+tbL1JpFFC7d1z3oKe9+OeodHvC6V/
+        swKxw1olQdU/f580o9Z+X9YTsjoyyU9e5zRWtaMhb6hIDPVtKRLF1sW6UWgH
+        MviT89+vHrr8OA3+bGOXMbUmw0d8jFBXaJQMcqXV/juDGLyoVJJIlhIQ3HrF
+        2rHNQA=="
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Api-Key:
-      - ***REMOVED******REMOVED***
+      - FILTERED_API_KEY
       Authorization:
       - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
   response:
@@ -40,12 +40,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 04 Dec 2017 08:17:11 GMT
+      - Sat, 09 Dec 2017 03:29:15 GMT
       Content-Length:
       - '283'
     body:
       encoding: UTF-8
-      string: '"NPFcELAev/IoMKSJyLT/0EbKoETO9I8g.tLJulQUaZB80u12mch2DFsuOjYoMjogX60Hv+49NcGZftX9orzf81cdl0kjttBHvvlZQHunSHv5xHbmyDhD+Z41Vq6RMCwOuz8STObUZq/YPgQwIoCZ8ICfxds76Tw+43//XojFUxCP3RGuoaTtytMKgDHNFWIL3M3q08UQHbAZ+/1kpUm1ZwflNS6qfz9e1l57gdJW5uLUkXK8GFO3QcW/P6tFAE8WOatAoH5LJyCOkBAYQsb8sVQ=="'
+      string: '"oWhI/4jKD0NdbUg2NKgrypK2znhQKClf.ikBfVgYqOvLHMQDNvKfglOyOZ6ENxMh4LQdccy7nQhaHuuGf8513/T6Uuzk8KQKQKPzLW8WQZU6R7dSSnWaWCsEeJKJMBl60SECc9eVLtTFCyC3wobjauAXlKgXdNRUBVxT4qgF8ESwwZQNnK0LnUBhTnQpurJTuFLDpGOeU4T6c4c2QKSS6wvc1eaiPVd//e6815mfqd1kYrPyG8WPXaZpx1hNWIFoUcvU4vC/2gW+/XZGLKiv8OA=="'
     http_version: 
-  recorded_at: Mon, 04 Dec 2017 08:17:21 GMT
+  recorded_at: Sat, 09 Dec 2017 03:29:17 GMT
 recorded_with: VCR 3.0.3

@@ -2,19 +2,19 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:14243/api_v01/api/SendOTPCodeByAccountNo
+    uri: FILTERED_BASE_URL/SendOTPCodeByAccountNo
     body:
       encoding: UTF-8
       string: |-
-        "NPFcELAev/Ir/WCID7MEhtP3ooZtJUgj./QpYhDJvVXNNfkvXEoSnUy7pKTrfVShtz6jczinBlIgKDMlsKOhKlWS/0Deb
-        dtRbXDe6gI3nkY3gVgQ7vnMNnw=="
+        "oWhI/4jKD0MXwYnWgi6Bh6Cua+sSHB5B.ou75nhcUdmIUCWvGxpI6/1yUAB0TJdbzKG9Hvsoy9Ah+RDXCUNP3FK5ywJTB
+        5RCLsyw1pMlW4GMpgtcj7VR8bw=="
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Api-Key:
-      - ***REMOVED******REMOVED***
+      - FILTERED_API_KEY
       Authorization:
       - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
   response:
@@ -37,12 +37,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 04 Dec 2017 07:43:48 GMT
+      - Sat, 09 Dec 2017 03:33:05 GMT
       Content-Length:
       - '123'
     body:
       encoding: UTF-8
-      string: '"NPFcELAev/JDCcKfnxfwFkayKj/EZG5L.XZmR1d7vo6FH6ngVfNlTofk1xIS/2UJIvSO876qFFOHljf+UZqitQd5DRMwAQkSE2jFLDYM/Dump9pxSYdbEkg=="'
+      string: '"oWhI/4jKD0PDLwvNdFchreqUk/8jd4iw.UMb3azBOVWbwwgCPrjwdePwCsBZ51xM8avYlP/z+ifnXVEV6pYW9NGHFD3qkNOHrjGDN4XB3ASFg2dXA6WmqPg=="'
     http_version: 
-  recorded_at: Mon, 04 Dec 2017 07:43:58 GMT
+  recorded_at: Sat, 09 Dec 2017 03:33:07 GMT
 recorded_with: VCR 3.0.3

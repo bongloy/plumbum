@@ -111,18 +111,6 @@ RSpec.describe Plumbum::Request::Transfer do
 #      it { assert_execute! }
     end
 
-    context "error 108", :cassette => :transfer_108 do
-      let(:asserted_successful) { false }
-
-      def assert_execute!
-        super
-        expect(response.error_code).to eq("108")
-        expect(response.error_message).to eq("Token is expired")
-      end
-
-      it { assert_execute! }
-    end
-
     context "error 110", :cassette => :transfer_110 do
       let(:asserted_successful) { false }
 

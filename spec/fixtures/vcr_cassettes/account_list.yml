@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:14243/api_v01/api/GetAccountListByATMCardNo
+    uri: FILTERED_BASE_URL/GetAccountListByATMCardNo
     body:
       encoding: UTF-8
-      string: '"D3yuLS2R5Ki+IzbvaFZezOqUk/8jd4iw.mb/Hrn8MUzcj9jlvGFEY62wuJ0fUpRvsdjl/7txSZtYtkW4Sk7HBWA=="'
+      string: '"oWhI/4jKD0NC55fgaxDlg5qvoQswJT2V.R7iW38g9iAf8ZgQNT9tk9WfsVkc3cyQBWfAHXczfUUeLhbC6CCXJDw=="'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Api-Key:
-      - ***REMOVED******REMOVED***
+      - FILTERED_API_KEY
       Authorization:
       - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
   response:
@@ -35,12 +35,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 31 Oct 2017 10:39:07 GMT
+      - Sat, 09 Dec 2017 03:25:08 GMT
       Content-Length:
       - '451'
     body:
       encoding: UTF-8
-      string: '"D3yuLS2R5KiggXRpjuBdrJqvoQswJT2V.gCegpE4A7Pw4kND5hlVnqJogAYdICymNIZzJifcRTglUa89jm7OqGh5LhaxR8ufAJ9DFrYkwLw4RcMez2w03nFHY9jP1fc8nORPiydQUoVPqCSs9ptUS0POrOLYCBLv6aRQ67PPkEEZqr5mIZgwRiZ8Gl5hnT4H5P9o85dGNLzA+il23Klgok8f2JMcwgnI9Jy9oC0pqsHlnbm/KI60ssX2+nxU7nJZy2ZuKnabKw8nMxIT36wAyDimq9QopBnwuLzE4TysPVDdA/ZNXM50vzJV2/6SyyaR7ixPRbdgrxrrKQ9yok5qcZfr6P1CX/zRC7OgInvgQHNioD1dbXD7LpnfFz0i6q47RJtRrjQXWw42nj6FmCOVwRcXJpPZxls8clXb/pLLJpHtIg8Q9Thcyxkdzzxz12IHC"'
+      string: '"oWhI/4jKD0PVzPADtX9r50ayKj/EZG5L.dW3DC1USwu/gPYrmH1OdVqcX1bW+9NLc7BecykaLqHVPktUID7FyDcxuzYe30A5evSSZk97dSRfdD1qsnxQSqtXdZrjTIcwxG9dcEAGvzekpThCEae+R9i9P10Qjdq8vfriQEiSSxwXLXMkR354e9Gbqiq+3JJlEsRX3Wsy33J6n4SBeMS9snW8dwUSFeFCzk15KfAEWBp97WjgAZ5HLXPGA059IwmwPtoLU7gQcSpYN7L8BxG57obv38HNiiwDM/eQW3UyVUBw3zazH0BzIXuSJtoxQY4WPYOuWjeJDLJyjvH4QBZsq//K5oL3PKr5kaib24HZgWv+75SSb6ZnUlIuPuAEf1AWVvU0ZoIRnoCNHqqm9QGbl2DnOdZiISz445Im2jFBjhY/5TpONEA2jLQxPzLNDwdu2"'
     http_version: 
-  recorded_at: Tue, 31 Oct 2017 10:39:16 GMT
+  recorded_at: Sat, 09 Dec 2017 03:25:10 GMT
 recorded_with: VCR 3.0.3

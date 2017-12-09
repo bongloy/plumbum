@@ -36,16 +36,16 @@ RSpec.describe Plumbum::Request::OTP do
       it { assert_execute! }
     end
 
-    context "error 110", :cassette => :send_otp_110 do
+    context "error 113", :cassette => :send_otp_113 do
       let(:account_number) { "000010100280303" }
-      let(:phone_number) { "85510533537" }
+      let(:phone_number) { "85510533538" }
 
       let(:asserted_successful) { false }
 
       def assert_execute!
         super
-        expect(response.error_code).to eq("110")
-        expect(response.error_message).to eq("Failed to Process Transaction")
+        expect(response.error_code).to eq("113")
+        expect(response.error_message).to eq("Data not found")
       end
 
       it { assert_execute! }

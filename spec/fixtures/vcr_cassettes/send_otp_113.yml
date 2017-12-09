@@ -2,21 +2,19 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:14243/api_v01/api/TransferOutAccount
+    uri: FILTERED_BASE_URL/SendOTPCodeByAccountNo
     body:
       encoding: UTF-8
       string: |-
-        "D3yuLS2R5KgqxVDNOBhCZjTmgAsOqDam.8SI8koSzelXSQA2Y09vEMgALjehCItgm++yyriTZlxuyD3/6Jcq/HTXbk/V1
-        EsHLTT+XmixSkMqZ+7EmeDyNiOJqPfQwnOuQEwk9uFghqnGdOY0BhgLwpiGt
-        Yt1foZHF9ZQ0t4rutXp3IL8ut0FeJ305cONJd2GKv9AzruTDcSWzowqvCkcG
-        6w=="
+        "oWhI/4jKD0PAlSySsdg9M9P3ooZtJUgj.7S7hAmVs8wChhQ9A9XY4awcVOh6nlWn7mcqmtryn0eKLa58v2rZgU7Dc10U4
+        L9DpW7fqX2jlboU="
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Api-Key:
-      - ***REMOVED******REMOVED***
+      - FILTERED_API_KEY
       Authorization:
       - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
   response:
@@ -39,12 +37,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 31 Oct 2017 11:08:04 GMT
+      - Sat, 09 Dec 2017 03:35:56 GMT
       Content-Length:
-      - '219'
+      - '99'
     body:
       encoding: UTF-8
-      string: '"D3yuLS2R5KhgQCMD6sVan5qvoQswJT2V.jLWbSAUObkwrxQe+lrQ6JmKu256xLLLAykM2kEyhBB26HEkDF2jL/mq4uwdimNpgw2iKPE1UksBmpsa2YWwua/nIeaw4YqQ2Sg/ckt4v15sNrFXjFZfcd/ZX5J7z2wbq9ioiCReQYtD28cboOJs1PkTOWmYpb2aZna0yhvkXAn6dC/0ZedNNWQ=="'
+      string: '"oWhI/4jKD0NASRBHHByxvOm0BhpwYKQv.PU6SsdDa5VdeWJiXWqnvi4bLbUE14rjTLbK1Q53AizAJapwI2Tjp/SUSIamT04yv"'
     http_version: 
-  recorded_at: Tue, 31 Oct 2017 11:08:14 GMT
+  recorded_at: Sat, 09 Dec 2017 03:35:58 GMT
 recorded_with: VCR 3.0.3

@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:14243/api_v01/api/GetAccountListByATMCardNo
+    uri: FILTERED_BASE_URL/GetAccountListByATMCardNo
     body:
       encoding: UTF-8
-      string: '"D3yuLS2R5KjWmB3C0IuQsZK2znhQKClf.iQjg28+0Q3/qS8jKZsjOLPOwux8vYd9N"'
+      string: '"oWhI/4jKD0O3NgOjhHKrvDTmgAsOqDam.Nvgojyz2Y5gmm+xQGwwXyNlsxHX9IwOd"'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Api-Key:
-      - ***REMOVED******REMOVED***
+      - FILTERED_API_KEY
       Authorization:
       - Basic Ym9uZ2xveXVhdDpib25nbG95IzEyMw==
   response:
@@ -35,12 +35,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 31 Oct 2017 10:39:07 GMT
+      - Sat, 09 Dec 2017 03:26:19 GMT
       Content-Length:
       - '187'
     body:
       encoding: UTF-8
-      string: '"D3yuLS2R5KjzWOJVOO1zIUayKj/EZG5L.EK38ch4CdYAHEFw7Q4Zzdz8hxIcyuYhq4k3lNHRjaKQfANmGtUnYF3NuWMgxePoYgbFuggp3nRb/Ev/uvNNOh2g9VFKEgaHsQo/DnSzFn7OW+y/jiO3+N89QcZtBmYzPpl3rPD40YEA90+iETIfP0w=="'
+      string: '"oWhI/4jKD0OxdNHcuhcFVNP3ooZtJUgj.nnXLACFZrmvgsOEK76lgHUgbgzMcq8kbYyt7cUDeKaWAZLc9yt03yb5jcPR/DYViUXFt08ycNkngpEnNwib0tTAd+cCxIWo8AcP6sFQgAbRLP9i8+m+xHjuOxoVHAfrwMAjGWr/TxhBIAgWEYO4uUA=="'
     http_version: 
-  recorded_at: Tue, 31 Oct 2017 10:39:16 GMT
+  recorded_at: Sat, 09 Dec 2017 03:26:21 GMT
 recorded_with: VCR 3.0.3
